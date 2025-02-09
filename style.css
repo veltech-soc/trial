@@ -1031,6 +1031,30 @@ display:none;
     box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
     background: linear-gradient(45deg, rgba(124, 58, 237, 0.3), rgba(139, 92, 246, 0.3));
 }
+
+@media (max-width: 768px) {
+    .college-logo {
+        width: 100%;
+        height: auto;
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+    
+    .college-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .about-container h2 {
+        font-size: 1.8rem; /* Adjust font size for better readability */
+    }
+    
+    .about-container p {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+}
+}
   /* Floating Tech Elements */
   .floating-elements {
     position: absolute;
@@ -1164,3 +1188,56 @@ display:none;
       grid-template-columns: repeat(2, 1fr);
     }
   } 
+
+
+
+
+
+
+
+
+
+/* Countdown Section Styles */
+.countdown-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(to bottom, #1a1a1a, #2d1b69);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+#countdown-timer {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#countdown-timer span {
+    color: #8b5cf6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#countdown-timer span:hover {
+    color: #6d28d9;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    #countdown-timer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #countdown-timer span {
+        font-size: 1.2rem;
+    }
+}
+
