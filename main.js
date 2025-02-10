@@ -344,6 +344,7 @@ if (ctaButton) {
 }
 
 
+
 // Function to create event cards
 function createEventCards(filteredEvents = events) {
     const container = document.getElementById('events-container');
@@ -372,11 +373,18 @@ function createEventCards(filteredEvents = events) {
     });
 }
 
+
 // Function to filter events
 function filterEvents(type) {
     const filteredEvents = type === 'all' ? events : events.filter(event => event.type === type);
     createEventCards(filteredEvents);
     document.getElementById('events').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
 }
 
 // Function to show event details
@@ -421,6 +429,7 @@ function showEventDetails(eventId) {
 
     modal.style.display = 'block';
 }
+
 
 
 
