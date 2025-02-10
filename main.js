@@ -508,8 +508,8 @@ function toggleMenu() {
       });
 
 
- // Set the date we're counting down to
- var countDownDate = new Date("Dec 31, 2025 23:59:59").getTime();
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 3, 2025 00:00:00").getTime();
 
  // Update the count down every 1 second
  var x = setInterval(function() {
@@ -538,3 +538,25 @@ function toggleMenu() {
      document.getElementById("countdown-timer").innerHTML = "Registration Closed";
  }
  }, 1000);
+
+
+
+ function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('active');
+}
+
+document.addEventListener('scroll', function() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+    }
+});
+
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobile-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
