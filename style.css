@@ -1260,19 +1260,17 @@ display:none;
 
 
 
-
-
-/* Modal Style */
+/* Ensure the modal has the highest z-index */
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1000; /* Ensure the modal is on top of other elements */
+    z-index: 9999; /* Ensure the modal is on top of everything (particles, other elements) */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Black with higher opacity to block the background */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay background to cover everything */
     padding-top: 60px;
 }
 
@@ -1282,9 +1280,9 @@ display:none;
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Can be adjusted */
-    max-width: 640px; /* Maximum width for the modal */
-    position: relative; /* Ensure it's positioned correctly within the modal */
+    width: 80%;
+    max-width: 640px;
+    position: relative; /* Ensure it's within the modal */
 }
 
 /* Close Button */
