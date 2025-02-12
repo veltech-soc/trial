@@ -560,3 +560,15 @@ document.addEventListener('click', function(event) {
         menu.classList.remove('active');
     }
 });
+
+
+
+// Function to open the Google Form modal
+function openGoogleFormModal() {
+    document.getElementById("google-form-modal").style.display = "block";
+}
+
+// Function to close the Google Form modal
+function closeGoogleFormModal() {
+    document.getElementById("google-form-modal").style.display = "none";
+}
